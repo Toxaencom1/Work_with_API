@@ -6,13 +6,24 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpHeaders;
 import org.springframework.web.client.RestTemplate;
 
-
-//не обязательный код, есть в задании
+/**
+ * AppConfig Class
+ *
+ * This class serves as the configuration class for the Spring application.
+ * It configures beans and properties needed for the application to function.
+ */
 @Configuration
 @ConfigurationPropertiesScan("com.taxah.springdz6task2.config")
 public class AppConfig {
+    /**
+     * RestTemplate Bean Configuration
+     * <p>
+     * Configures and returns a RestTemplate bean for making HTTP requests.
+     *
+     * @return RestTemplate: The configured RestTemplate bean.
+     */
     @Bean
-    public RestTemplate template(){
+    public RestTemplate template() {
         return new RestTemplate();
     }
 
