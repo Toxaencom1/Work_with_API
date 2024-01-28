@@ -1,0 +1,79 @@
+body {
+    background-color: #222;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: 0 auto;
+}
+
+th, td {
+    border: 1px solid #444;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #333;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #444;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.card {
+    width: 50%; /* Ширина карточки */
+    margin: 0 auto 20px; /* Выравнивание по центру */
+    border: 1px solid #ccc; /* Граница карточки */
+    border-radius: 10px; /* Скругление углов */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Тень */
+    padding: 10px; /* Внутренние отступы */
+    background-color: #565656;
+    transition: transform 0.2s ease-in-out;
+}
+.card:hover {
+    transform: scale(0.97); /* Увеличение размера на 5% при наведении */
+}
+
+
+a {
+    color: #fff;
+    text-decoration: none;
+    background-color: #333;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+button {
+    background-color: #4CAF50; /* Цвет фона */
+    border: none; /* Убираем границу */
+    color: white; /* Цвет текста */
+    padding: 10px 20px; /* Внутренние отступы */
+    text-align: center; /* Выравниваем текст по центру */
+    text-decoration: none; /* Убираем подчеркивание */
+    display: inline-block; /* Выводим как блочный элемент */
+    font-size: 16px; /* Размер текста */
+    cursor: pointer; /* Указатель при наведении */
+    border-radius: 5px; /* Скругление углов */
+}
+
+/* Стили для кнопки при наведении */
+button:hover {
+    background-color: #45a049; /* Изменяем цвет фона при наведении */
+}
+
+a:hover {
+    background-color: #555;
+}

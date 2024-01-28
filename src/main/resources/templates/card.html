@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Информация о персонаже</title>
+    <link rel="stylesheet" href="/css/card.css">
+</head>
+<body>
+<h1>Информация о персонаже</h1>
+
+<div class="card" th:object="${card}">
+    <p><img th:src="${card.image}" alt="Изображение персонажа"></p>
+    <p>ID: <span th:text="${card.id}">ID</span></p>
+    <p>Имя: <span th:text="${card.name}">Имя</span></p>
+    <p>Статус: <span th:text="${card.status}">Статус</span></p>
+    <p>Вид: <span th:text="${card.species}">Вид</span></p>
+    <p>Тип: <span th:text="${card.type}">Тип</span></p>
+    <p>Пол: <span th:text="${card.gender}">Пол</span></p>
+<!--    <p>Ссылка на профиль: <a th:href="${card.url}" th:text="${card.url}">Ссылка на профиль</a></p>-->
+    <p>Дата создания: <span th:text="${card.created}">Дата создания</span></p>
+</div><br>
+<div>
+    <button onclick="goBack()">Назад</button>
+</div>
+<script>
+    function goBack() {
+        window.history.back();
+    }
+</script>
+</body>
+</html>

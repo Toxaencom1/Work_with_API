@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Список персонажей</title>
+    <link rel="stylesheet" href="/css/characters.css">
+</head>
+<body>
+<div>
+    <img class="header" src="/images/header.png" alt="Header">
+</div>
+<h1>Список персонажей</h1>
+<div class="card" th:each="character : ${characters.results}">
+    <a th:href="${'/characters/card/'+character.id}">
+        <img class="cardImage" th:src="${character.image}" alt="Изображение персонажа">
+    </a>
+<table >
+    <thead>
+    <tr>
+        <th>Имя</th>
+        <th>Статус</th>
+        <th>Вид</th>
+        <th>Тип</th>
+        <th>Пол</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td th:text="${character.name}">Имя</td>
+        <td th:text="${character.status}">Статус</td>
+        <td th:text="${character.species}">Вид</td>
+        <td th:text="${character.type}">Тип</td>
+        <td th:text="${character.gender}">Пол</td>
+    </tr>
+    </tbody>
+</table>
+</div><br><br>
+<div class="footer">
+    <a class="ref" th:if="${characters.info.prev}" th:href="@{'/characters/page/' + ${page-1}}">Предыдущая страница</a>
+    <span> <- -> </span>
+    <a class="ref" th:if="${characters.info.next}" th:href="@{'/characters/page/' + ${page+1}}">Следующая страница</a>
+</div>
+</body>
+</html>
