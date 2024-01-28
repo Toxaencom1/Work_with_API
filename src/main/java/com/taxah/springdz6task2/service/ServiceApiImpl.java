@@ -5,7 +5,6 @@ import com.taxah.springdz6task2.config.MagicProperties;
 import com.taxah.springdz6task2.model.Characters;
 import com.taxah.springdz6task2.model.Result;
 import lombok.AllArgsConstructor;
-import org.springframework.http.*;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -17,7 +16,7 @@ public class ServiceApiImpl implements ServiceApi{
 
 
     private RestTemplate template;
-    private HttpHeaders headers;
+//    private HttpHeaders headers;// не пригодилось
     private final MagicProperties url;
 
     public Characters getCharactersOnPage(int page){
