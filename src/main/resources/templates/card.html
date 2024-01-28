@@ -17,7 +17,7 @@
     <p>Тип: <span th:text="${card.type}">Тип</span></p>
     <p>Пол: <span th:text="${card.gender}">Пол</span></p>
 <!--    <p>Ссылка на профиль: <a th:href="${card.url}" th:text="${card.url}">Ссылка на профиль</a></p>-->
-    <p>Дата создания: <span th:text="${card.created}">Дата создания</span></p>
+    <p>Дата создания: <span th:text="${#dates.format(card.created, 'HH:mm:ss dd-MM-yyyy')}">Дата создания</span></p>
 </div><br>
 <div>
     <button onclick="goBack()">Назад</button>
